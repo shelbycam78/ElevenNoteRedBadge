@@ -42,7 +42,7 @@ namespace ElevenNote.Data
             modelBuilder
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
-                .Add(new IdentityUserRoleconfiguration());
+                .Add(new IdentityUserRoleConfiguration());
         }
         public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
         {
@@ -52,9 +52,9 @@ namespace ElevenNote.Data
             }
         }
 
-        public class IdentityUserRoleconfiguration : EntityTypeConfiguration<IdentityUserRole>
+        public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
         {
-            public IdentityUserRoleconfiguration()
+            public IdentityUserRoleConfiguration()
             {
                 HasKey(iur => iur.UserId);
             }
